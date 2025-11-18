@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LatinLoveMx — PRO</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">💘 <span>LatinLoveMx</span></div>
+    <nav>
+      <button id="navDiscover" class="nav-btn active">Descubrir</button>
+      <button id="navMatches" class="nav-btn">Matches</button>
+      <button id="navChat" class="nav-btn">Chat</button>
+      <button id="navProfile" class="nav-btn">Perfil</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="discover" class="view active">
+      <div id="deck" class="center"></div>
+    </section>
+
+    <section id="matches" class="view">
+      <div class="container">
+        <h2>Matches</h2>
+        <div id="matchesList" class="list"></div>
+      </div>
+    </section>
+
+    <section id="chat" class="view">
+      <div class="container chat-grid">
+        <aside class="convo-list">
+          <h3>Conversaciones</h3>
+          <div id="convoList" class="list"></div>
+        </aside>
+        <div class="chat-window">
+          <div id="chatHeader" class="chat-header">Selecciona una conversación</div>
+          <div id="messages" class="messages"></div>
+          <div id="sendRow" class="send-row">
+            <input id="msgInput" placeholder="Escribe..." />
+            <button id="btnSend">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="view">
+      <div class="container">
+        <h2>Mi perfil</h2>
+        <div class="profile-box">
+          <img id="myAvatar" class="avatar-lg" src="" alt="avatar"/>
+          <input id="name" placeholder="Nombre" />
+          <input id="email" placeholder="Email" />
+          <input id="password" type="password" placeholder="Contraseña" />
+          <input id="age" type="number" placeholder="Edad" />
+          <textarea id="bio" placeholder="Biografía"></textarea>
+          <input id="fileAvatar" type="file" accept="image/*" />
+          <button id="btnSaveProfile">Guardar perfil / Registrar</button>
+          <button id="btnLogin">Entrar</button>
+          <button id="btnLogout">Cerrar sesión</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- socket.io client -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
